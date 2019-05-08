@@ -1,6 +1,6 @@
 {
-  "name": "switchcase",
-  "version": "1.0.0",
+  "name": "switch-js",
+  "version": "0.1.0",
   "dependencies": {
     "@types/node": "^12.0.0",
     "typescript": "^3.4.5"
