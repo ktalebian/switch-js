@@ -1,4 +1,4 @@
-import * as predictors from '../../src/lib/predictors';
+import * as predictors from 'app/lib/predictors';
 
 describe('predictors', () => {
 	describe('is', () => {
@@ -31,15 +31,44 @@ describe('predictors', () => {
 			expect(predictors.eq('some-string')('some-string')).toBeTruthy();
 		});
 	});
+
+	describe('greaterThan', () => {
+		it('should be truthy', () => {
+			expect(predictors.greaterThan(7)(10)).toBeTruthy();
+			expect(predictors.greaterThan(7, 8)(10, 11)).toBeTruthy();
+		});
+
+		it('should be falsy', () => {
+			expect(predictors.greaterThan(7)(6)).toBeFalsy();
+			expect(predictors.greaterThan(7, 8)(6, 5)).toBeFalsy();
+			expect(predictors.greaterThan(7, 8)(10, 5)).toBeFalsy();
+		});
+	});
+
+	describe('greaterThanAll', () => {
+		it('should be truthy', () => {
+			expect(predictors.greaterThanAll(8)(11)).toBeTruthy();
+			expect(predictors.greaterThanAll(8)(11, 10, 9)).toBeTruthy();
+		});
+
+		it('should be falsy', () => {
+			expect(predictors.greaterThanAll(8)(7)).toBeFalsy();
+			expect(predictors.greaterThanAll(8)(7, 6, 5)).toBeFalsy();
+			expect(predictors.greaterThanAll(8)(7, 6, 9)).toBeFalsy();
+		});
+	});
+
+	describe('atLeastOneGreaterThan', () => {
+		it('should be truthy', () => {
+			expect(predictors.atLeastOneGreaterThan(8)(11)).toBeTruthy();
+			expect(predictors.atLeastOneGreaterThan(8)(11, 10, 9)).toBeTruthy();
+			expect(predictors.atLeastOneGreaterThan(8)(11, 2)).toBeTruthy();
+			expect(predictors.atLeastOneGreaterThan(8)(2, 11)).toBeTruthy();
+		});
+
+		it('should be falsy', () => {
+			expect(predictors.greaterThanAll(8)(7)).toBeFalsy();
+			expect(predictors.greaterThanAll(8)(7, 6, 5)).toBeFalsy();
+		});
+	});
 });
-
-
-export function is<T extends any[], L extends any[] & {length: T['length']}>(...klasses: L) {
-	return (...variables: T) => {
-		return variables
-			.every((variable, index) => variable instanceof klasses[index]);
-	}
-}
-
-is(Number, String)(1, 1); // ok
-is(Number, String)(1);

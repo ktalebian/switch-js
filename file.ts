@@ -10,6 +10,20 @@ export interface ISwitch<R, T extends Array<any>> {
 }
 
 /**
+ * Calls the {@link Matched} method
+ *
+ * @param matched	the match method
+ * @returns the result of {@link Matched}
+ */
+function callMatched<R>(matched: Matched<R>): R {
+	if (typeof matched === 'function') {
+		return (matched as Function) ();
+	}
+
+	return matched;
+}
+
+/**
  * When/case method
  *
  * @param variables the variables to test
@@ -22,7 +36,7 @@ function whenFn<R, T extends Array<any>>(...variables: T) {
 		}
 
 		if (predictor(...variables)) {
-			this._matched = matched();
+			this._matched = callMatched(matched);
 		}
 
 		return this;
@@ -40,7 +54,7 @@ function otherwiseFn(matched) {
 		return this._matched;
 	}
 
-	return matched();
+	return callMatched(matched);
 }
 
 /**
@@ -60,6 +74,4 @@ export default function Switch<R, T extends Array<any>>(...variables: T): ISwitc
 
 	return this;
 }
-
-
 

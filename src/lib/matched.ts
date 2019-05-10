@@ -5,7 +5,7 @@ import { Matched } from "./switch";
  *
  * @param value		the value to return
  */
-export function doReturn<R>(value): Matched<R> {
+export function doReturn<R>(value: any): Matched<R> {
 	return () => {
 		return value;
 	}
