@@ -3,7 +3,7 @@ A declarative and functional replacement of JavaScript `switch` statement
 
 ## What's Wrong with `switch`?
 
-There are a few reasons why the [JavaScript switch is not loved](https://bit.ly/2V2jVPj). 
+There are a few reasons why the [JavaScript switch is not loved](https://bit.ly/305Kxmg). 
 
 The motivation behind this project is to allow a functional switch statement that can also test for multiple variables simultaneously. 
 
@@ -12,15 +12,15 @@ The motivation behind this project is to allow a functional switch statement tha
 Install using `npm` by running
 
 ```bash
-npm install switch-js
+npm install @ktalebian/switch
 ```
 
 ## Usage 
 
-Switch-JS creates a declarative chains of `when` to build up your case statements:
+Switch creates a declarative chains of `when` to build up your case statements:
 
 ```javascript
-import Switch from 'switch-js';
+import Switch from '@ktalebian/switch';
 
 const response = Switch(...variables)
     .when(Predictor, Matched)
@@ -38,7 +38,7 @@ The `otherwise` cause takes a `Matched` clause and is invoked if none of the `Pr
 **Example with single argument**
 
 ```javascript
-import Switch from 'switch-js';
+import Switch from '@ktalebian/switch';
 
 const response = Switch(variable)
     .when(x => x < 5, () => 'ok')
@@ -54,7 +54,7 @@ const response = Switch(variable)
 **Example with multiple arguments**
 
 ```javascript
-import Switch from 'switch-js';
+import Switch from '@ktalebian/switch';
 
 const response = Switch(variable1, variable2)
     .when((x, y) => x > y, () => x)
@@ -84,7 +84,7 @@ There are a few common helpers that `SwithCase` provides
 ##### is Predictor
 
 ```javascript
-import Switch, { is } from 'switch-js';
+import Switch, { is } from '@ktalebian/switch';
 
 const resp = Switch(error)
     .when(is(CustomError), () => 'this is a custom-error')
@@ -97,7 +97,7 @@ This predictor checks that the variable passed is an `instanceof` `CustomError` 
 ##### eq Predictor
 
 ```javascript
-import Switch, { eq } from 'switch-js';
+import Switch, { eq } from '@ktalebian/switch';
 
 const resp = Switch(variable)
     .when(eq(5), () => 'equals 5')
@@ -127,7 +127,7 @@ The `Matched` callback is invoked when the `when` clause of the predictor is tru
 If your result is a simple value back, you can use the `doReturn` helper callback:
 
 ```javascript
-import Switch, { eq, doReturn } from  'switch-js';
+import Switch, { eq, doReturn } from  '@ktalebian/switch';
 
 const resp = Switch(variable)
     .when(eq(5), doReturn('this is 5'))
