@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ktalebian/switch.svg?branch=master)](https://travis-ci.org/ktalebian/switch)
+
 # switch-js
 A declarative and functional replacement of JavaScript `switch` statement
 
