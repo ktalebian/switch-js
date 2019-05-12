@@ -2,14 +2,8 @@
 ![npm](https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=flat-square)
 [![NpmLicense](https://img.shields.io/npm/l/@ktalebian/switch.svg?style=flat-square)](LICENSE.md)
 
-# switch-js
-A declarative and functional replacement of JavaScript `switch` statement
-
-## What's Wrong with `switch`?
-
-There are a few reasons why the [JavaScript switch is not loved](https://bit.ly/305Kxmg). 
-
-The motivation behind this project is to allow a functional switch statement that can also test for multiple variables simultaneously. 
+# switch
+A declarative and functional replacement of JavaScript `switch` statement 
 
 ## Installation
 
