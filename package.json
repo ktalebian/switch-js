@@ -1,6 +1,10 @@
 {
   "name": "@ktalebian/switch",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ktalebian/switch.git"
+  },
   "license": "ISC",
   "files": [
     "build"
