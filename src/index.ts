@@ -5,9 +5,9 @@ export {
     eq,
     greaterThan,
     greaterThanAll,
-    atLeastOneGreaterThan
+    atLeastOneGreaterThan,
 } from "./lib/predictors";
 
 export {
-    doReturn
+    doReturn,
 } from "./lib/matched";
