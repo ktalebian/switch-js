@@ -1,2 +1,13 @@
 export { default } from "./lib/switch";
-export { is, eq } from "./lib/predictors";
+
+export {
+    is,
+    eq,
+    greaterThan,
+    greaterThanAll,
+    atLeastOneGreaterThan
+} from "./lib/predictors";
+
+export {
+    doReturn
+} from "./lib/matched";
