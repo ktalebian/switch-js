@@ -13,8 +13,6 @@ cache: npm
 deploy:
   provider: npm
   email: kousha.talebian@gmail.com
-  api_key:
-    secure: AalsG/w6k/7VduR7A971vGsvw2sI/EBcAR7s90o1P69uM/uQL+phqHPIUCREnQtTOWNrcWS3EoRxozoZ/Q2PEBzszlV8FQQ8xZkRg/VxuQbQ1xwiAiPgZg0b/PyOQm3zCx3Y1AnD4Q8rDrScxMnzNaKhRve5n8hepSKWyoWbe9Hf9Ut1Q0xgGADtewyFf76cEOaS/4A4MconBeVRth578yQ8zXLfAvfQjsJAW6Qqca0sIWNu7W/UEiYBcnpgn/4TW9AQbG7y9wa324Curwud2BEHJf/0YPpRG9cg0KF1D8bE7Jmaun2npd9r9pBbuUOniYvxQiUjACg0vl3l/wgbPD2kseN+LzpiHsz8pq2n95dAKfHR6I1YbWZyqGRbMvFIBLaMO3ZXcLqseMfgKAqvufKTj4ZTYCfud04J9+e8vYlfCZl4/8682Vu4SqXYqHP/Ii0iVf2jaOEDLFtXe2orY1iUnrmkZLSpqr7j/ohV1YDBUNCmJ+vLlzJCOVRJQ28g14lvUtBIcuFoRY8G7yetQcQL68mfemLcJoMx8SOx/uLwqxICHcch/zAS1IVb10gHS+gPPR69vc/svIWX2NuszDqyGSDjFX3QnhjinOIojndnvk8jmJEuwpu/1yk2R6Kltff49odv/4QNtHjrQWk4uKE9z5zbXlMSRsKd6YbfEiY=
   on:
     tags: true
     repo: ktalebian/switch
