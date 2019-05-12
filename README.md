@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/ktalebian/switch.svg?branch=master)](https://travis-ci.com/ktalebian/switch)
+![npm](https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=flat-square)
+[![NpmLicense](https://img.shields.io/npm/l/@ktalebian/switch.svg?style=flat-square)](LICENSE.md)
+
 # switch-js
 A declarative and functional replacement of JavaScript `switch` statement
 
