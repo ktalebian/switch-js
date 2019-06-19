@@ -1,10 +1,23 @@
-[![Build Status](https://travis-ci.com/ktalebian/switch.svg?branch=master)](https://travis-ci.com/ktalebian/switch)
-[![codecov](https://codecov.io/gh/ktalebian/switch/branch/master/graph/badge.svg)](https://codecov.io/gh/ktalebian/switch)
-![npm](https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=flat-square)
-[![NpmLicense](https://img.shields.io/npm/l/@ktalebian/switch.svg?style=flat-square)](LICENSE.md)
+<h1 align="center">@ktalebian/switch</h1>
+<p align="center">A declarative and functional replacement of JavaScript `switch` statement</p>
 
-# switch
-A declarative and functional replacement of JavaScript `switch` statement 
+<p align="center">
+    <a href="https://travis-ci.com/ktalebian/switch">
+        <img src="https://travis-ci.com/ktalebian/switch.svg?branch=master" title="Build Status" />
+    </a>
+    <a href="https://codecov.io/gh/ktalebian/switch">
+        <img src="https://codecov.io/gh/ktalebian/switch/branch/master/graph/badge.svg" title="Code Coverage" />
+    </a>
+    <a href="https://www.npmjs.com/package/@ktalebian/switch">
+        <img src="https://img.shields.io/npm/v/@ktalebian/switch.svg?style=flat-square" title="npm" />
+    </a>
+    <a href="https://www.npmjs.com/package/@ktalebian/switch">
+        <img src="https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=flat-square" title="npm" />
+    </a>
+    <a href="./LICENSE.md">
+        <img src="https://img.shields.io/npm/l/@ktalebian/switch.svg?style=flat-square" title="License" />
+    </a>
+</p>
 
 ## Installation
 
