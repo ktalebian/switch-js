@@ -9,13 +9,13 @@
         <img src="https://codecov.io/gh/ktalebian/switch/branch/master/graph/badge.svg" title="Code Coverage" />
     </a>
     <a href="https://www.npmjs.com/package/@ktalebian/switch">
-        <img src="https://img.shields.io/npm/v/@ktalebian/switch.svg?style=flat-square" title="npm" />
+        <img src="https://img.shields.io/npm/v/@ktalebian/switch.svg?style=square" title="npm" />
     </a>
     <a href="https://www.npmjs.com/package/@ktalebian/switch">
-        <img src="https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=flat-square" title="npm" />
+        <img src="https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=square" title="npm" />
     </a>
     <a href="./LICENSE.md">
-        <img src="https://img.shields.io/npm/l/@ktalebian/switch.svg?style=flat-square" title="License" />
+        <img src="https://img.shields.io/npm/l/@ktalebian/switch.svg?style=square" title="License" />
     </a>
 </p>
 
