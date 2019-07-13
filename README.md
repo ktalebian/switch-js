@@ -1,4 +1,4 @@
-<h1 align="center">@ktalebian/switch</h1>
+<h1 align="center">@k88/switch</h1>
 <p align="center">A declarative and functional replacement of JavaScript `switch` statement</p>
 
 <p align="center">
@@ -8,14 +8,14 @@
     <a href="https://codecov.io/gh/ktalebian/switch">
         <img src="https://codecov.io/gh/ktalebian/switch/branch/master/graph/badge.svg" title="Code Coverage" />
     </a>
-    <a href="https://www.npmjs.com/package/@ktalebian/switch">
-        <img src="https://img.shields.io/npm/v/@ktalebian/switch.svg?style=square" title="npm" />
+    <a href="https://www.npmjs.com/package/@k88/switch">
+        <img src="https://img.shields.io/npm/v/@k88/switch.svg?style=square" title="npm" />
     </a>
-    <a href="https://www.npmjs.com/package/@ktalebian/switch">
-        <img src="https://img.shields.io/npm/dt/@ktalebian/switch.svg?style=square" title="npm" />
+    <a href="https://www.npmjs.com/package/@k88/switch">
+        <img src="https://img.shields.io/npm/dt/@k88/switch.svg?style=square" title="npm" />
     </a>
     <a href="./LICENSE.md">
-        <img src="https://img.shields.io/npm/l/@ktalebian/switch.svg?style=square" title="License" />
+        <img src="https://img.shields.io/npm/l/@k88/switch.svg?style=square" title="License" />
     </a>
 </p>
 
@@ -24,7 +24,7 @@
 Install using `npm` by running
 
 ```bash
-npm install @ktalebian/switch
+npm install @k88/switch
 ```
 
 ## Usage 
@@ -32,7 +32,7 @@ npm install @ktalebian/switch
 Switch creates a declarative chains of `when` to build up your case statements:
 
 ```javascript
-import Switch from '@ktalebian/switch';
+import Switch from '@k88/switch';
 
 const response = Switch(...variables)
     .when(Predictor, Matched)
@@ -50,7 +50,7 @@ The `otherwise` cause takes a `Matched` clause and is invoked if none of the `Pr
 **Example with single argument**
 
 ```javascript
-import Switch from '@ktalebian/switch';
+import Switch from '@k88/switch';
 
 const response = Switch(variable)
     .when(x => x < 5, () => 'ok')
@@ -66,7 +66,7 @@ const response = Switch(variable)
 **Example with multiple arguments**
 
 ```javascript
-import Switch from '@ktalebian/switch';
+import Switch from '@k88/switch';
 
 const response = Switch(variable1, variable2)
     .when((x, y) => x > y, () => x)
@@ -96,7 +96,7 @@ There are a few common helpers that `SwithCase` provides
 ##### is Predictor
 
 ```javascript
-import Switch, { is } from '@ktalebian/switch';
+import Switch, { is } from '@k88/switch';
 
 const resp = Switch(error)
     .when(is(CustomError), () => 'this is a custom-error')
@@ -109,7 +109,7 @@ This predictor checks that the variable passed is an `instanceof` `CustomError` 
 ##### eq Predictor
 
 ```javascript
-import Switch, { eq } from '@ktalebian/switch';
+import Switch, { eq } from '@k88/switch';
 
 const resp = Switch(variable)
     .when(eq(5), () => 'equals 5')
@@ -139,7 +139,7 @@ The `Matched` callback is invoked when the `when` clause of the predictor is tru
 If your result is a simple value back, you can use the `doReturn` helper callback:
 
 ```javascript
-import Switch, { eq, doReturn } from  '@ktalebian/switch';
+import Switch, { eq, doReturn } from  '@k88/switch';
 
 const resp = Switch(variable)
     .when(eq(5), doReturn('this is 5'))
