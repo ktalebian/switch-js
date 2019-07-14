@@ -14,7 +14,7 @@
     <a href="https://www.npmjs.com/package/@k88/switch">
         <img src="https://img.shields.io/npm/dt/@k88/switch.svg?style=square" title="npm" />
     </a>
-    <a href="./LICENSE.md">
+    <a href="./LICENSE">
         <img src="https://img.shields.io/npm/l/@k88/switch.svg?style=square" title="License" />
     </a>
 </p>
