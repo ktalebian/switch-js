@@ -1,16 +1,15 @@
-import { Predictor } from "./switch";
+import { Predictor } from './switch';
 
-type FixedArray<T, L extends any[]>  = T[] & { length: L["length"] };
+type FixedArray<T, L extends any[]> = T[] & { length: L['length'] };
 
 /**
  * A predictor that checks the variable is of the same instance
  * @param klasses	the list of classes to check
  */
 export function is<T extends any[]>(...klasses: FixedArray<any, T>): Predictor<T> {
-    return (...variables: T) => {
-        return variables
-            .every((variable, index) => variable instanceof klasses[index]);
-    };
+  return (...variables: T) => {
+    return variables.every((variable, index) => variable instanceof klasses[index]);
+  };
 }
 
 /**
@@ -18,10 +17,9 @@ export function is<T extends any[]>(...klasses: FixedArray<any, T>): Predictor<T
  * @param values	the values
  */
 export function eq<T extends any[]>(...values: FixedArray<any, T>): Predictor<T> {
-    return (...variables: T) => {
-        return variables
-            .every((variable, index) => variable === values[index]);
-    };
+  return (...variables: T) => {
+    return variables.every((variable, index) => variable === values[index]);
+  };
 }
 
 /**
@@ -36,10 +34,9 @@ export function eq<T extends any[]>(...values: FixedArray<any, T>): Predictor<T>
  * @param values	the list of values to compare it to
  */
 export function greaterThan<T extends any[]>(...values: FixedArray<number, T>): Predictor<T> {
-    return (...variables: T) => {
-        return variables
-            .every((variable, index) => variable > values[index]);
-    };
+  return (...variables: T) => {
+    return variables.every((variable, index) => variable > values[index]);
+  };
 }
 
 /**
@@ -52,10 +49,9 @@ export function greaterThan<T extends any[]>(...values: FixedArray<number, T>): 
  * @param value
  */
 export function greaterThanAll<T extends any[]>(value: number): Predictor<T> {
-    return (...variables: T) => {
-        return variables
-            .every((variable) => variable > value);
-    };
+  return (...variables: T) => {
+    return variables.every(variable => variable > value);
+  };
 }
 
 /**
@@ -68,8 +64,7 @@ export function greaterThanAll<T extends any[]>(value: number): Predictor<T> {
  * @param value
  */
 export function atLeastOneGreaterThan<T extends any[]>(value: number): Predictor<T> {
-    return (...variables: T) => {
-        return variables
-            .some((variable) => variable > value);
-    };
+  return (...variables: T) => {
+    return variables.some(variable => variable > value);
+  };
 }

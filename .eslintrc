@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "twilio-ts"
+  ],
+  "rules": {
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/interface-name-prefix": 0
+  }
+}
