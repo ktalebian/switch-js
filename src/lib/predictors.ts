@@ -50,7 +50,7 @@ export function greaterThan<T extends any[]>(...values: FixedArray<number, T>): 
  */
 export function greaterThanAll<T extends any[]>(value: number): Predictor<T> {
   return (...variables: T) => {
-    return variables.every(variable => variable > value);
+    return variables.every((variable) => variable > value);
   };
 }
 
@@ -65,6 +65,6 @@ export function greaterThanAll<T extends any[]>(value: number): Predictor<T> {
  */
 export function atLeastOneGreaterThan<T extends any[]>(value: number): Predictor<T> {
   return (...variables: T) => {
-    return variables.some(variable => variable > value);
+    return variables.some((variable) => variable > value);
   };
 }
